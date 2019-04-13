@@ -1,0 +1,43 @@
+/* ========================================
+    
+    sns
+        ソーシャルメディア系のスタイル
+
+    INDEX
+        - menu
+
+======================================== */
+
+/* ========================================
+    menu
+======================================== */
+.sns-menu {
+    &__item {
+        $this: &;
+        display: inline-block;
+
+        &--twitter {
+            @extend #{$this};
+        }
+
+        &--instagram {
+            @extend #{$this};
+        }
+
+        &--facebook {
+            @extend #{$this};
+        }
+
+        &--youtube {
+            @extend #{$this};
+        }
+
+        &--line {
+            @extend #{$this};
+        }
+
+        &--google {
+            @extend #{$this};
+        }
+    }
+}

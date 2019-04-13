@@ -1,0 +1,94 @@
+/* ========================================
+
+    btn
+        ボタンのスタイル
+
+    INDEX
+        - class
+        - normal
+        - special
+
+======================================== */
+
+// ========================================
+//  class
+// ========================================
+// 一番普通のボタンの共通スタイル
+%normal-btn {
+    border-radius: 5px;
+}
+
+// 目立たせたいボタンの共通スタイル
+%special-btn {
+    background-color: red;
+    color: white;
+}
+
+// 幅いっぱいのサイズ
+%btn-100 {
+    display: block;
+    width: 100%;
+}
+
+// ２つ並べられるサイズ
+%btn-50 {
+    display: inline-block;
+    width: 49%;
+}
+
+// ちっちゃいサイズ
+%btn-30 {
+    display: block;
+    width: 30%;
+}
+
+
+/* ========================================
+    normal
+        よく使うボタン
+======================================== */
+.btn-100 {
+    @extend %normal-btn;
+    @extend %btn-100;
+}
+
+.btn-50 {
+    @extend %normal-btn;
+    @extend %btn-50;
+}
+
+.btn-30 {
+    $this: &;
+    @extend %normal-btn;
+    @extend %btn-30;
+    margin: auto;
+
+    // 右寄せ
+    &--right {
+        @extend #{$this};
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    // 左寄せ
+    &--left {
+        @extend #{$this};
+        margin-right: auto;
+        margin-left: 0;
+    }
+}
+
+
+/* ========================================
+    special
+        特別目立たせたいボタン
+======================================== */
+.btn-special-100 {
+    @extend %special-btn;
+    @extend %btn-100;
+}
+
+.btn-special-50 {
+    @extend %special-btn;
+    @extend %btn-50;
+}
