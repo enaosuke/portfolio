@@ -25,31 +25,84 @@
         <meta name="twitter:site" content="@アカウント名">
         <meta name="twitter:title" content="サイトタイトル">
         <meta name="twitter:description" content="サイトの説明">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-        <link rel="shortcut icon" href="/favicon.ico">
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+        <link rel="shortcut icon" href="./favicon.ico">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/fullpage.min.css">
     </head>
-    <!-- <body>
+    <body>
         <header class="header">
-            <nav>
-                <ul>
-                    <li><a href="#">リンク1</a></li>
-                    <li><a href="#">リンク2</a></li>
+            <nav class="header-nav">
+                <ul class="header-nav__list">
+                    <li class="header-nav__item"><a href="#top"><span class="icon"></span>TOP</a></li>
+                    <li class="header-nav__item"><a href="#about"><span class="icon"></span>ABOUT</a></li>
+                    <li class="header-nav__item"><a href="#skill"><span class="icon"></span>SKILL</a></li>
+                    <li class="header-nav__item"><a href="#portfolio"><span class="icon"></span>PORTFOLIO</a></li>
+                    <li class="header-nav__item"><a href="#contact"><span class="icon"></span>CONTACT</a></li>
                 </ul>
             </nav>
         </header>
-        <div class="trigger-menu">
-            <div class="trigger-menu__inner"><span></span><span></span><span></span></div>
-        </div>
-        <main class="wraper">
-            <div class="inner">
-                <div class="content">
-                    <p>
-                        test test test
-                        test test test
-                    </p>
+        <main class="wraper" id="js-fullpage">
+            <section class="section main-visual" data-anchor="top">
+                <div class="inner">
+                    <h1 class="logo">TITLE</h1><img src="" alt="">
                 </div>
-            </div>
+            </section>
+            <section class="section" data-anchor="about">
+                <div class="inner">
+                    <h2 class="section-title">ABOUT<span class="jp">私について</span></h2>
+                    <ul class="me">
+                        <li class="me-img"><img src="" alt=""></li>
+                        <li class="me-text">
+                            <table class="me-text__table">
+                                <tbody>
+                                    <tr>
+                                        <th class="title">名前</th>
+                                        <td class="body">ホリハタ ナオ</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="title">出身</th>
+                                        <td class="body">埼玉</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="title">学歴</th>
+                                        <td class="body">東洋美術学校 イラストレーション科</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="title">活動</th>
+                                        <td class="body"> </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="title">その他</th>
+                                        <td class="body"> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section" data-anchor="skill">
+                <h2 class="section-title">SKILL<span class="jp">技能</span></h2>
+                <ul class="skill-set__list">
+                    <li class="skill-set__item">
+                        <div class="skill-set__icon"><img src="" alt="Illustrator"></div>
+                        <h4 class="skill-set__name">Illustrator</h4>
+                        <div class="skill-set__circle p90">
+                            <div class="skill-set__circle__inner">
+                                <p class="skill-set__high"></p>90<span class="skill-set__ratio">%</span>
+                            </div>
+                        </div>
+                        <p class="skill-set__year">3years</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="section" data-anchor="portfolio">
+                <h2 class="section-title">PORTFOLIO<span class="jp">作品集</span></h2>
+            </section>
+            <section class="section" data-anchor="contact">
+                <h2 class="section-title">CONTACT<span class="jp">お問い合わせ</span></h2>
+            </section>
             <div class="s-elem">s-elem</div>
             <div class="m-elem">m-elem</div>
             <div class="l-elem">l-elem</div>
@@ -60,7 +113,18 @@
             <div><small>copylight</small></div>
         </footer>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="/js/plugins/jquery-3.3.1.min.js"><\/script>')</script>
-        <script src="/js/example.js"></script>
-    </body> -->
+        <script>window.jQuery || document.write('<script src="./js/plugins/jquery-3.3.1.min.js"><\/script>')</script>
+        <script src="./js/main.js"></script>
+        <script src="./js/plugins/fullpage.min.js"></script>
+        <script>
+            new fullpage('#js-fullpage', {
+                anchors: ['top', 'about', 'skill', 'portfolio', 'contact'],
+                navigationTooltips: ['fullPage', 'Open', 'Easy', 'Touch'],
+                easingcss3: "cubic-bezier(0.645, 0.045, 0.355, 1)",
+                scrollingSpeed: 1000,
+                navigation: true,
+                slidesNavigation: true,
+            });
+        </script>
+    </body>
 </html>

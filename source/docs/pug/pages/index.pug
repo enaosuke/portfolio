@@ -5,17 +5,70 @@ block setVariable
 
 //- メインコンテンツ
 block content
-    .trigger-menu
-        .trigger-menu__inner
-            span
-            span
-            span
-    main.wraper
-        div.inner
-            div.content
-                p
-                    | test test test
-                    | test test test
+    main#js-fullpage.wraper
+        section.section.main-visual(data-anchor='top')
+            .inner
+                h1.logo
+                    | TITLE
+                img(src="", alt="")
+        section.section(data-anchor='about')
+            .inner
+                h2.section-title
+                    | ABOUT
+                    span.jp 私について
+
+                ul.me
+                    li.me-img
+                        img(src="", alt="")
+                    li.me-text
+                        table.me-text__table
+                            tbody
+                                tr
+                                    th.title| 名前
+                                    td.body| ホリハタ ナオ
+                                tr
+                                    th.title| 出身
+                                    td.body| 埼玉
+                                tr
+                                    th.title| 学歴
+                                    td.body| 東洋美術学校 イラストレーション科
+                                tr
+                                    th.title| 活動
+                                    td.body| 
+                                tr
+                                    th.title| その他
+                                    td.body| 
+        section.section(data-anchor='skill')
+            h2.section-title
+                | SKILL
+                span.jp 技能
+
+            ul.skill-set__list
+                li.skill-set__item
+                    .skill-set__icon
+                        img(src='', alt='Illustrator')
+                    h4.skill-set__name Illustrator
+                        
+                    .skill-set__circle.p90
+                        .skill-set__circle__inner
+                            p.skill-set__high
+                            | 90
+                            span.skill-set__ratio %
+                    p.skill-set__year 3years
+
+
+
+
+        section.section(data-anchor='portfolio')
+            h2.section-title
+                | PORTFOLIO
+                span.jp 作品集
+
+
+        section.section(data-anchor='contact')
+                h2.section-title
+                    | CONTACT
+                    span.jp お問い合わせ
 
         .s-elem s-elem
         .m-elem m-elem

@@ -12,5 +12,30 @@
     common
 ======================================== */
 .header {
-    
+    &-nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: $C_BLACK;
+        z-index: 1;
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: auto;
+            width: 80%;
+            max-width: $BP_L;
+        }
+
+        &__item {
+            position: relative;
+
+            a {
+                display: block;
+                padding: 10px;
+                color: $C_WHITE;
+            }
+        }
+    }
 }
